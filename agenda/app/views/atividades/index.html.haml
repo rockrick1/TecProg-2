@@ -1,0 +1,4 @@
+%h1 Atividades cadastradas
+- @atividades.each do |at|
+    %i= "#{at.nome} começa às #{at.horario_inicio} e termina às #{at.horario_fim}. Será na #{at.sala} e será dada por #{at.professor}\n"
+    %br

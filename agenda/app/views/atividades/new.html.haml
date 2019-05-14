@@ -1,0 +1,13 @@
+%h1 Nova atividade
+= form_with scope: :atividade, url: atividades_path, local: true  do |f|
+  = f.label :nome
+  = f.text_field :nome
+  = f.label :horario_inicio
+  = f.text_field :horario_inicio
+  = f.label :horario_fim
+  = f.text_field :horario_fim
+  = f.label :sala
+  = f.text_field :sala
+  = f.label :professor
+  = f.text_field :professor
+  = f.submit

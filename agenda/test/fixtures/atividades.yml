@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  horario_inicio: MyString
+  horario_fim: MyString
+  sala: MyString
+  professor: MyString
+
+two:
+  nome: MyString
+  horario_inicio: MyString
+  horario_fim: MyString
+  sala: MyString
+  professor: MyString
