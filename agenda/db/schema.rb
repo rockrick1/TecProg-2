@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_17_215619) do
+ActiveRecord::Schema.define(version: 2019_05_28_172959) do
 
   create_table "atividades", force: :cascade do |t|
     t.string "nome"
-    t.string "horario_inicio"
-    t.string "horario_fim"
+    t.datetime "horario_inicio"
+    t.datetime "horario_fim"
     t.string "sala"
     t.string "professor"
     t.datetime "created_at", null: false
