@@ -1,4 +1,22 @@
 %h1 Atividades cadastradas
-- @atividades.each do |at|
-    %i= "#{at.nome} começa às #{at.horario_inicio} e termina às #{at.horario_fim}. Será na #{at.sala} e será dada por #{at.professor}\n"
-    %br
+%table{border: 3}
+    %tr
+        %th Nome
+        %th Horario de fim
+        %th Horario de inicio
+        %th Sala
+        %th Professor
+
+    - @atividades.each do |at|
+        %tr
+            %td= at.nome
+            %td= at.horario_inicio
+            %td= at.horario_fim
+            %td= at.sala
+            %td= at.professor
+            %td
+                = link_to 'Editar', edit_atividade_path(at)
+            %td
+                = link_to 'Apagar', atividade_path(at), method: :delete,
+                data: {confirm: 'Certeza?'}
+= link_to 'Nova atividade', new_atividade_path
