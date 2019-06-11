@@ -1,22 +1,23 @@
-%h1 Atividades cadastradas
-%table{border: 3}
-    %tr
-        %th Nome
-        %th Horario de início
-        %th Horario de fim
-        %th Sala
-        %th Professor
-
-    - @atividades.each do |at|
+%center
+    %h1.titulo=t(:list)
+    %table{border: 3}
         %tr
-            %td= at.nome
-            %td= at.horario_inicio
-            %td= at.horario_fim
-            %td= at.sala
-            %td= at.professor
-            %td
-                = link_to t(:edit), edit_atividade_path(at)
-            %td
-                = link_to t(:delete), atividade_path(at), method: :delete,
-                data: {confirm: 'Deseja mesmo apagar essa atividade?'}
-= link_to 'Nova atividade', new_atividade_path
+            %th Nome
+            %th Horario de início
+            %th Horario de fim
+            %th Sala
+            %th Professor
+
+        - @atividades.each do |at|
+            %tr
+                %td= at.nome
+                %td= at.horario_inicio
+                %td= at.horario_fim
+                %td= at.sala
+                %td= at.professor
+                %td
+                    = link_to t(:edit), edit_atividade_path(at)
+                %td
+                    = link_to t(:delete), atividade_path(at), method: :delete,
+                    data: {confirm: 'Deseja mesmo apagar essa atividade?'}
+    = link_to 'Nova atividade', new_atividade_path

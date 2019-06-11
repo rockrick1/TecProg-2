@@ -4,6 +4,7 @@ pt:
     back: 'Voltar'
     delete: 'Apagar'
     new: 'Novo'
+    list: 'Atividades Cadastradas'
     active_record:
         errors:
             messages:
