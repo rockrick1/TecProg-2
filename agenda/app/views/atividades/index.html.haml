@@ -17,6 +17,7 @@
                 %td= at.professor
                 %td
                     = link_to t(:edit), edit_atividade_path(at)
+                    %span.glyphicon.glyphicon-pencil
                 %td
                     = link_to t(:delete), atividade_path(at), method: :delete,
                     data: {confirm: 'Deseja mesmo apagar essa atividade?'}

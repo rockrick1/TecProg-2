@@ -5,7 +5,7 @@ pt:
     delete: 'Apagar'
     new: 'Novo'
     list: 'Atividades Cadastradas'
-    active_record:
+    activerecord:
         errors:
             messages:
                 blank: "está em branco!"
