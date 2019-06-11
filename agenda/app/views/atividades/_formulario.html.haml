@@ -1,4 +1,8 @@
 = form_with model: @atividade, local: true  do |f|
+    - if @atividade.errors.any?
+        %ul
+        - @atividade.errors.full_messages.each do |msg|
+            %li= msg
     %table
         %tr
             %td

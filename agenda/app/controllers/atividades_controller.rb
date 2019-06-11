@@ -4,8 +4,13 @@ class AtividadesController < ApplicationController
              params.require(:atividade).permit(:nome, :horario_inicio, :horario_fim, :sala, :professor))
         # salva
         @atividade.save
-        # mostra
-        redirect_to @atividade
+        #testamos o salva
+        if @atividade.save
+            # mostra
+            redirect_to @atividade
+        else
+            render 'new'
+        end
     end
 
     def new
