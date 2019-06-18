@@ -27,7 +27,9 @@ class AtividadesController < ApplicationController
 
     def destroy
         @atividade = Atividade.find(params[:id])
-        @atividade.destroy
+        if @atividade.destroy
+            flash[:notice] = "bye bye atividade!"
+        end
 
         redirect_to atividades_path
     end
