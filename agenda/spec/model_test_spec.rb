@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Atividade, type: :model do
+############################## Testes de atributos #############################
     it "is valid with valid attributes" do
         expect(Atividade.new(nome: "Tecprog", horario_inicio: "12:30",
                horario_fim: "13:30", sala: "b10", professor: "Jonas Brothers")).to be_valid
@@ -29,5 +30,21 @@ RSpec.describe Atividade, type: :model do
     it "is not valid without a name" do
         expect(Atividade.new(nome: nil, horario_inicio: "12:30",
                horario_fim: "13:30", sala: "b10", professor: "Eminem")).to_not be_valid
+    end
+
+############################## Testes de conflitos #############################
+    it "two activities cant happen in the same class at the same time" do
+        expect {
+            Atividade.new(nome: "Tecprog", horario_inicio: "10:00",
+                horario_fim: "11:00", sala: "b10", professor: "Jonas Brothers")
+            Atividade.new(nome: "Analise", horario_inicio: "10:30",
+                horario_fim: "11:30", sala: "b10", professor: "Coelho")
+        }.to change{Atividade.count}.by(2)
+        expect {
+            Atividade.new(nome: "Tecprog", horario_inicio: "10:00",
+                horario_fim: "11:00", sala: "b10", professor: "Jonas Brothers")
+            Atividade.new(nome: "Analise", horario_inicio: "10:30",
+                horario_fim: "11:30", sala: "b10", professor: "Coelho")
+        }.to raise_error
     end
 end

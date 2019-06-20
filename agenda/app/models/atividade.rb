@@ -26,8 +26,10 @@ class Atividade < ApplicationRecord
     end
 
     def horarios
-        if horario_inicio >= horario_fim
-            errors.add(nome,  "possui horários inválidos!")
+        if horario_inicio != nil and horario_fim != nil
+            if horario_inicio >= horario_fim
+                errors.add(nome,  "possui horários inválidos!")
+            end
         end
     end
 end
