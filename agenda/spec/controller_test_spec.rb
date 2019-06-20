@@ -1,15 +1,5 @@
 require 'rails_helper'
 
-FactoryGirl.define do
-    factory :atividade do
-        nome 'Tecprog'
-        horario_inicio '11:00'
-        horario_fim '12:00'
-        sala 'b5'
-        professor 'Puce'
-    end
-end
-
 RSpec.describe AtividadesController, type: :controller do
     describe 'atividades controller request specs' do
         context 'GET #index' do
