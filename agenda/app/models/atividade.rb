@@ -1,6 +1,7 @@
 class Atividade < ApplicationRecord
     validates_presence_of :nome, :sala, :professor, :horario_inicio, :horario_fim
     validate :conflitos
+    validate :horarios
 
     private
 
@@ -8,7 +9,7 @@ class Atividade < ApplicationRecord
         atividades = Atividade.all
 
         atividades.each do |atv|
-            if atv.nome != nome # que nao seja a atividade que estamos inserindo
+            if atv.id != id # que nao seja a atividade que estamos inserindo
                 # checa se tem mais de uma atividade ao mesmo tempo na sala
                 if atv.sala == sala
                     if atv.horario_fim > horario_inicio and atv.horario_inicio < horario_fim
@@ -21,6 +22,12 @@ class Atividade < ApplicationRecord
                     end
                 end
             end
+        end
+    end
+
+    def horarios
+        if horario_inicio >= horario_fim
+            errors.add(nome,  "possui horários inválidos!")
         end
     end
 end
