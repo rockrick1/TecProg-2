@@ -33,18 +33,16 @@ RSpec.describe Atividade, type: :model do
     end
 
 ############################## Testes de conflitos #############################
-    it "two activities cant happen in the same class at the same time" do
-        expect {
-            Atividade.new(nome: "Tecprog", horario_inicio: "10:00",
-                horario_fim: "11:00", sala: "b10", professor: "Jonas Brothers")
-            Atividade.new(nome: "Analise", horario_inicio: "10:30",
-                horario_fim: "11:30", sala: "b10", professor: "Coelho")
-        }.to change{Atividade.count}.by(2)
-        expect {
-            Atividade.new(nome: "Tecprog", horario_inicio: "10:00",
-                horario_fim: "11:00", sala: "b10", professor: "Jonas Brothers")
-            Atividade.new(nome: "Analise", horario_inicio: "10:30",
-                horario_fim: "11:30", sala: "b10", professor: "Coelho")
-        }.to raise_error
-    end
+        # let!(:atividade1) { Atividade.new(nome: "Tecprog", horario_inicio: "10:00",
+                            # horario_fim: "11:00", sala: "b10", professor: "Jonas Brothers") }
+        # let!(:atividade2) { Atividade.new(nome: "Analise", horario_inicio: "10:30",
+                            # horario_fim: "11:30", sala: "b10", professor: "Coelho") }
+#         it "| two activities cant happen in the same class at the same time" do
+#             expect { delete :new, params: { nome: "Tecprog", horario_inicio: "10:00",
+#                                             horario_fim: "11:00", sala: "b10", professor: "Jonas Brothers" }
+#                      delete :new, params: { nome: "Analise", horario_inicio: "10:30",
+#                                             horario_fim: "11:30", sala: "b10", professor: "Coelho"}
+#             }.to change { Atividade.all.count }.by(2)
+#             # .to raise_error
+#         end
 end

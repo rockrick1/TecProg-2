@@ -11,6 +11,6 @@
         e será dada por
         %i= @atividade.professor
     %p
-        = link_to 'Editar', edit_atividade_path(@atividade)
-        = link_to 'Novo',   new_atividade_path
-        = link_to 'Lista',  atividades_path
+        = link_to 'Editar', edit_atividade_path(@atividade), class: "button"
+        = link_to 'Novo',   new_atividade_path, class: "button"
+        = link_to 'Início',  atividades_path, class: "button"

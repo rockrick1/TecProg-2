@@ -26,8 +26,8 @@ RSpec.describe AtividadesController, type: :controller do
             it 'should update atividade attributes' do
                 params = {
                     nome: 'Analise',
-                    horario_inicio: '12:00',
-                    horario_fim: '12:15',
+                    horario_inicio: '2010-06-24 12:00',
+                    horario_fim: '2010-06-24 12:15',
                     sala: 'saguão',
                     professor: 'Puce'
                 }

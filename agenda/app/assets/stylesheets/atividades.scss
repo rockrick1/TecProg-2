@@ -2,6 +2,34 @@
    obrigado aos envolvidos
 */
 
+.button {
+	background-color: pink;
+	border: none;
+	color: black;
+	padding: 7px 10px;
+	border: 1px solid black;
+	border-radius: 4px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	transition-duration: 0.2s;
+	float:center;
+}
+
+.button:hover {
+	background-color: purple;
+	color: white;
+}
+
+.buttonNew {
+	background-color: pink; /* rosa */
+	color: black
+}
+.buttonEdit {background-color: #008CBA /* azul */ }
+.buttonDelete {background-color: #F44336 /* vermelho */ }
+.buttonBack {background-color: pink }
+
 table {
 	width: 750px;
 	border-collapse: collapse;

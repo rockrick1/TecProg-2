@@ -30,4 +30,5 @@
             %td
                 = f.text_field :professor
 
-    = f.submit t(:save)
+    = f.submit t(:save), class: "button"
+    = link_to 'Voltar', atividades_path, class: "button buttonBack"

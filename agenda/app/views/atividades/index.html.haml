@@ -1,6 +1,7 @@
 %center
-    %h1.titulo=t(:list)
-    %table{border: 3}
+    %h1.titulo= Agenda
+    %h2.subtitulo=t(:list)
+    %table{border: 2}
         %tr
             %th Nome
             %th Horario de início
@@ -18,9 +19,11 @@
                 %td= at.sala
                 %td= at.professor
                 %td
-                    = link_to t(:edit), edit_atividade_path(at)
+                    = link_to t(:edit), edit_atividade_path(at),
+                    class: "button buttonEdit"
                     %span.glyphicon.glyphicon-pencil
                 %td
                     = link_to t(:delete), atividade_path(at), method: :delete,
-                    data: {confirm: 'Deseja mesmo apagar essa atividade?'}
-    = link_to 'Nova atividade', new_atividade_path
+                    data: {confirm: 'Deseja mesmo apagar essa atividade?'},
+                    class: "button buttonDelete"
+    = link_to 'Nova atividade', new_atividade_path, class: "button buttonNew"
