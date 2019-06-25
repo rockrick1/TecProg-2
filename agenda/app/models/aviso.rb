@@ -1,4 +1,4 @@
 class Aviso < ApplicationRecord
-  validates :body, presence: true, length: {minimum: 10} 
-  validates :title, presence: true, length: {minimum: 10}
+  validates :body, presence: true, length: {maximum: 50} 
+  validates :title, presence: true, length: {maximum: 20}
 end

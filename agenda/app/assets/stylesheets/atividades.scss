@@ -2,10 +2,43 @@
    obrigado aos envolvidos
 */
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
 .button {
-	background-color: pink;
+	background-color: #333;
 	border: none;
-	color: black;
+	color: white;
 	padding: 7px 10px;
 	border: 1px solid black;
 	border-radius: 4px;
@@ -23,12 +56,12 @@
 }
 
 .buttonNew {
-	background-color: pink; /* rosa */
-	color: black
+	background-color: #333; /* rosa */
+	color: white
 }
-.buttonEdit {background-color: #008CBA /* azul */ }
-.buttonDelete {background-color: #F44336 /* vermelho */ }
-.buttonBack {background-color: pink }
+.buttonEdit {background-color: #333 /* azul */ }
+.buttonDelete {background-color: #333 /* vermelho */ }
+.buttonBack {background-color: #333 }
 
 table {
 	width: 750px;
@@ -42,8 +75,8 @@ tr:nth-of-type(odd) {
 	}
 
 th {
-	background: #3498db;
-	color: cyan;
+	background: #4CAF50;
+	color: white;
 	font-weight: bold;
 	}
 
