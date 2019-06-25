@@ -5,14 +5,19 @@
    obrigado aos envolvidos novamente */
 ul {
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   overflow: hidden;
   background-color: #333;
 }
 
-li {
+li.home {
   float: left;
+  border-right:1px solid #bbb;
+}
+
+li.list {
+  float: center;
   border-right:1px solid #bbb;
 }
 

@@ -2,7 +2,7 @@
     - if @atividade.errors.any?
         %ul
         - @atividade.errors.full_messages.each do |msg|
-            %li= msg
+            %li.list= msg
     %table
         %tr
             %td
