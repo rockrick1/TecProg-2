@@ -10,7 +10,7 @@ group :development, :test do # <<<< :development, not devlopment
   gem 'sqlite3', '~> 1.3.6'
 end
 group :production do
-  gem 'pq'
+  gem 'pg'
 end
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
