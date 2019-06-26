@@ -1,5 +1,4 @@
 class AvisosController < ApplicationController
-  before_action :require_login, only:[:edit, :destroy, :new]
   def index
     @title = 'Mural de avisos';
     @avisos = Aviso.all
