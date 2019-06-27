@@ -1,4 +1,5 @@
 class AtividadesController < ApplicationController
+    before_action :require_login, only:[:edit, :destroy, :new]
     def create
         @atividade = Atividade.new(
              params.require(:atividade).permit(:nome, :horario_inicio, :horario_fim, :sala, :professor))
